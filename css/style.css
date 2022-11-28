@@ -3,6 +3,45 @@ body{
     margin: 20px;
 
 }
+ 
+#header {
+    grid-area: header;
+ }
+ 
+ #nav {
+    grid-area: nav;
+ }
+ 
+ #content {
+    grid-area: header;
+ }
+ 
+ 
+ #aside {
+    grid-area: header;
+ }
+ #sidebar {
+    grid-area: sidebar;
+ }
+ #footer {
+    grid-area: footer;
+ }
+
+ #wrapper{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-areas: 
+    "header header ......"
+    "nav content aside"
+    "nav content sidebar"
+    "footer footer footer"
+ }
+ #wrapper > div {
+    background-color: dimgray;
+    padding: 10px;
+    border-radius: 10px;
+ }
 /* csökkenő sorrend, csak a változást jelenítsd meg */
 @media all and (max-width: 1200px) {
     body{
